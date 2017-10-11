@@ -26,7 +26,8 @@ const catch_me = document.getElementById("catch_me"),
     x = document.getElementById("count-sound"),
     level_num = document.getElementById("level_num"),
     level_description = document.getElementById("level_description"),
-    time_remaining = document.getElementById("time_remaining");
+    time_remaining = document.getElementById("time_remaining"),
+    muteButton = document.getElementById("mute");
 
 // Useful global values
 const catch_height = 50,
@@ -92,6 +93,17 @@ diff_btns.forEach(el => {
         url.searchParams.set("difficulty", e.target.id);
         window.location.replace(url);
     })
+});
+
+muteButton.addEventListener("click", function(){
+  audio_muted = document.getElementById('nyan-music').muted;
+  if(audio_muted){
+    muteButton.innerHTML = 'volume_up';
+  }else{
+    muteButton.innerHTML = 'volume_off';
+  }
+  document.getElementById('nyan-music').muted = !audio_muted;
+  document.getElementById('count-sound').muted = !audio_muted;
 });
 
 

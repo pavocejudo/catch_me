@@ -6,6 +6,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
 <body>
@@ -24,9 +25,10 @@
             <button class="diff-btn" id="MEDIUM">Medium</button>
             <button class="diff-btn" id="HARD">Hard</button>
             <button class="diff-btn" id="EXTREME">Extreme</button>
+            <button class="mute material-icons" id="mute">volume_up</button>
         </div>
     </div>
-    <audio src="http://www.nyan.cat/music/technyancolor.ogg" autoplay loop></audio>
+    <audio id="nyan-music" src="http://www.nyan.cat/music/technyancolor.ogg" autoplay loop></audio>
     <audio id="count-sound" src="http://freesound.org/data/previews/131/131660_2398403-lq.mp3"></audio>
 </body>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
